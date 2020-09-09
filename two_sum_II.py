@@ -30,4 +30,22 @@ def binary_search(numbers, temp, i):
 Time Complexity: O(n*logn) because of the binary search implementation over the entire array (n comes from for loop, logn from binary search)
 Space Complexity: O(1) because no extra space is being used
 """
-        
+ 
+def twoSum(numbers, target):
+    start = 0
+    end = len(numbers) - 1
+
+    while(start < end):
+        sum = numbers[start] + numbers[end]
+
+        if sum > target:
+            end -= 1
+        elif sum < target:
+            start += 1
+        elif sum == target:
+            return [start + 1, end + 1]
+
+"""
+Time Complexity: O(n) iteration over the entire array
+Space Complexity: O(1) because no extra space is being used
+"""
