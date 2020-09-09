@@ -1,0 +1,30 @@
+def twoSum(numbers, target):
+
+    for i in range(len(numbers)):
+        temp = target - numbers[i]
+        find_temp = binary_search(numbers, temp, i+1)
+
+        if(find_temp != i and find_temp != -1):
+            return [i + 1, find_temp + 1]
+
+
+def binary_search(numbers, temp, i):
+
+    start = i
+    end = len(numbers) - 1
+
+    while(start <= end):
+
+        mid = (start + end) // 2
+
+        if numbers[mid] > temp:
+            end = mid - 1
+        elif numbers[mid] < temp:
+            start = mid + 1
+        else:
+            return mid
+
+    return -1
+                
+        
+        
