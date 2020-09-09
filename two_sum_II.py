@@ -26,5 +26,8 @@ def binary_search(numbers, temp, i):
 
     return -1
                 
-        
+"""
+Time Complexity: O(n*logn) because of the binary search implementation over the entire array (n comes from for loop, logn from binary search)
+Space Complexity: O(1) because no extra space is being used
+"""
         
