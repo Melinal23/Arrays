@@ -22,7 +22,7 @@ def two_sum_optimized(nums, target):
         vals = elements.get(temp)
 
         #if compliment num in dict and index is not the same and times it appears is not zero
-        if temp in elements and vals[0] != i and vals[-1] > 0:
+        if vals and vals[0] != i and vals[-1] > 1:
             return sorted([i, vals[0]])
         
 """
